@@ -1,0 +1,772 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Commamedia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Philosopher:400,700');
+        /*margin*/
+        .mr--1{
+            margin-right: -1rem;
+        }
+        .ml--1{
+            margin-left: -1rem;
+        }
+        .mr--05{
+            margin-right: -.5rem;
+        }
+        .ml--05{
+            margin-left: -.5rem;
+        }
+        /*background*/
+        .bg_wrapper{
+            background: #f5e8da;
+        }
+        .bg_blue{
+            background: #0c3880;
+        }
+        /*font*/
+        .fs-18{
+            font-size: 18px;
+        }
+        .fs-35{
+            font-size: 25px;
+        }
+        .fs-50{
+            font-size: 40px;
+            line-height: 45px;
+        }
+        .ff-phi{
+            font-family: 'Philosopher', sans-serif;
+        }
+        .fw-bold{
+            font-weight: bold;
+        }
+        .cl-blue{
+            color: #0c3880;
+        }
+        /*position*/
+        .ps-rel{
+            position: relative;
+        }
+        /*display*/
+        .flex-center{
+            display: -webkit-flex;display: flex; height: 100%; align-items: center; justify-content: center; flex-direction: column;
+        }
+        .story-title img{
+            -webkit-transform: translateX(-20%);-moz-transform: translateX(-20%);-ms-transform: translateX(-20%);-o-transform: translateX(-20%);transform: translateX(-20%); max-width: 200px;
+        }
+        .moodboard-title span,
+        .story-title span{
+            position: absolute; left: 50%; top: 50%; -webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);
+        }
+        .moodboard-title img{
+            -webkit-transform: translateX(30%);-moz-transform: translateX(30%);-ms-transform: translateX(30%);-o-transform: translateX(30%);transform: translateX(30%); max-height: 150px
+        }
+        .lotus_absolute{
+            position: absolute; max-width: 200px !important; right: 0; bottom: -100px;
+        }
+        .exim_tet{
+            background: url('img/exim/bggrid.jpg') repeat;
+        }
+        .calender-port{
+            background: url('img/exim/bgcloud.png') no-repeat left center;
+        }
+        .quote_block:before{
+            position: absolute;
+            content: "";
+            background: url("img/exim/quote.png") no-repeat center center / contain;
+            width: 30px;
+            height: 30px;
+            left: -30px;
+            top: -30px;
+        }
+        .quote_block:after{
+            position: absolute;
+            content: "";
+            background: url("img/exim/quoteend.png") no-repeat center center / contain;
+            width: 30px;
+            height: 30px;
+            right: -30px;
+            bottom: -30px;
+        }
+        .text_ft{
+            position: absolute;
+            left: 50%;
+            top: 35%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .slide_exim img{
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            margin: 30px 0;
+        }
+        .slide_exim .swiper-slide:hover{
+            cursor: pointer;
+        }
+        .slide_exim .swiper-slide:hover img{
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .hover_img,
+        .hover_shine {
+            overflow: hidden;
+            position: relative;
+        }
+        .hover_img img{
+            -webkit-transition: all 1.5s ease;
+            -moz-transition: all 1.5s ease;
+            -ms-transition: all 1.5s ease;
+            -o-transition: all 1.5s ease;
+            transition: all 1.5s ease;
+        }
+        .hover_img:hover img{
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+        .hover_shine:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.5);
+            content: '';
+            -webkit-transition: -webkit-transform 0.6s;
+            transition: transform 0.6s;
+            -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+            transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);
+        }
+        .hover_shine:hover:before{
+            -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+            transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,120%,0);
+        }
+        .quote_cloud:before{
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 50px;
+            background: url("img/exim/cloudtquote.png") no-repeat center center / contain;
+            left: -100px;
+            top: -50px;
+        }
+        .quote_cloud:after{
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 50px;
+            background: url("img/exim/cloudquote2.png") no-repeat center center / contain;
+            right: -70px;
+            bottom: -50px;
+        }
+        /*.flip-box {
+            background-color: transparent;
+            perspective: 1000px;
+        }
+
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }*/
+        @media (max-width: 768px) {
+            .fs-50 {
+                font-size: 35px;
+                line-height: 40px;
+            }
+            .fs-35{
+                font-size: 28px;
+                line-height: 30px;
+            }
+            .fs-18{
+                font-size: 15px;
+                line-height: 18px;
+            }
+            .moodboard-title img,
+            .story-title img{
+                -webkit-transform: translateX(0);
+                -moz-transform: translateX(0);
+                -ms-transform: translateX(0);
+                -o-transform: translateX(0);
+                transform: translateX(0);
+            }
+            p{
+                padding: 0 15px;
+            }
+            .text_ft{
+                position: static;
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+                padding: 0 15px;
+            }
+        }
+    </style>
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="grid_site">
+    <div class="container">
+        <div class="grid_inner">
+            <ul class="d-none d-sm-block">
+                <li class="grid_item"></li>
+                <li class="grid_item"></li>
+                <li class="grid_item"></li>
+                <li class="grid_item"></li>
+                <li class="grid_item"></li>
+            </ul>
+            <ul class="d-block d-sm-none">
+                <li class="grid_item"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<ul class="contact_sidebar d-none d-sm-block" data-aos="fade-right" data-aos-delay="1000">
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Language">EN</a></li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Call"><img src="img/phone.png" class="img-fluid"
+                                                                                  alt=""></a></li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Chat"><img src="img/chat.png" class="img-fluid"
+                                                                                  alt=""></a></li>
+    <li>
+        <div class="line"></div>
+    </li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook"
+                                                                                    aria-hidden="true"></i></a></li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram"
+                                                                                     aria-hidden="true"></i></a></li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Linkedin"><i class="fa fa-linkedin"
+                                                                                    aria-hidden="true"></i></a></li>
+    <li class="line end"></li>
+</ul>
+<header id="header_site" class="fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 text-center">
+                <a href="/">
+                    <h1 title="Commamedia">
+                        <figure class="logo_site" data-aos="fade-left">
+                            <img src="img/logo.png" class="img-fluid" alt="">
+                        </figure>
+                    </h1>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <nav class="navbar navbar-expand-lg navbar-light" data-aos="fade-left">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about-us.html">About us <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#client-comma">Clients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/career.html">Career</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact-us.html">Contact us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<div>
+    <div class="space_height"></div>
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="outer_wrap">
+                <div data-aos="fade-right">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="">Home</a></li>
+                        <li class="list-inline-item"><a href="">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="project-content">
+        <div class="container">
+            <div class="pr-3 pl-3">
+                <div class="bg_wrapper mr--1 ml--1 ps-rel">
+                    <div>
+                        <img src="img/exim/eximbanner.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="row justify-content-center mt-md-5">
+                        <div class="col-md-10">
+                            <div class="story-title text-center mb-md-5 cl-blue ff-phi fs-50 fw-bold ps-rel">
+                                <img src="img/exim/cloud.png" class="img-fluid" alt="">
+                                <span>Our Story</span>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 text-center mb-md-5">
+                                    <p>Sự tích “Cá chép hoá rồng” không còn xa lạ với văn hoá người Á Đông, đó là một hình
+                                    ảnh thể hiện sự lột xác của cá chép để trở thành Rồng - loài vật có quyền năng cao
+                                    cả, nhưng không phải là do may mắn mà là sự cố gắng phi thường để vươn lên của một
+                                    loài vật nhỏ bé. Với chủ đề "The New Eximbank", chúng tôi mong muốn mượn hình ảnh
+                                    “Cá chép hoá rồng” để thể hiện sự chuyển biến và đột phá cùng với những thành tựu
+                                    bền vững, phi thường. Hình ảnh của Eximbank truyền tải sự thịnh vượng, thành công và
+                                    tân tiến</p>
+                                </div>
+                            </div>
+                            <div class="mb-md-5">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <figure>
+                                            <img src="img/exim/carp.jpg" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <figure>
+                                            <img src="img/exim/dragon.jpg" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <figure>
+                                            <img src="img/exim/lotus.jpg" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="moodboard-title text-center mb-md-5 ps-rel fs-50 ff-phi cl-blue fw-bold">
+                                <img src="img/exim/cloud2.png" class="img-fluid" alt="">
+                                <span>Moodboard</span>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 text-center mb-md-5">
+                                    <p>Bộ Keyvisual Tết của Eximbank lần này là những artwork thể hiện quá trình vượt Vũ
+                                    Môn của Cá Chép kết hợp cùng những hình ảnh như mây, sóng nước, hoa sen, cổng đền,..
+                                    cùng với nét vẽ mang phong cách Á Đông để thổi vào sản phẩm một cảm giác truyền
+                                    thống nhưng không kém phần hiện đại.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ml--05 mr--05">
+                        <div class="col-md-4 pl-md-2 pr-md-2">
+                            <figure>
+                                <img src="img/exim/work1.jpg" class="img-fluid" alt="">
+                            </figure>
+                            <figure>
+                                <img src="img/exim/work4.jpg" class="img-fluid" alt="">
+                            </figure>
+                        </div>
+                        <div class="col-md-4 pl-md-2 pr-md-2">
+                            <figure>
+                                <img src="img/exim/work2.jpg" class="img-fluid" alt="">
+                            </figure>
+                            <figure>
+                                <img src="img/exim/work5.jpg" class="img-fluid" alt="">
+                            </figure>
+                        </div>
+                        <div class="col-md-4 pl-md-2 pr-md-2">
+                            <figure>
+                                <img src="img/exim/work3.jpg" class="img-fluid" alt="">
+                            </figure>
+                            <figure>
+                                <img src="img/exim/work6.jpg" class="img-fluid" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="mb-5 ps-rel">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-4 order-md-1">
+                                        <div class="story-title flex-center text-center mb-5 ps-rel fs-50 ff-phi cl-blue fw-bold">
+                                            <img src="img/exim/cloud.png" class="img-fluid" alt="">
+                                            <span>Sketch</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 order-md-0">
+                                        <figure>
+                                            <img src="img/exim/sketch.png" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="img/exim/bglotus.png"
+                             class="lotus_absolute d-none d-md-block" alt="">
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <div class="pr-3 pr-md-0 pl-3 mb-3 pl-md-0 ps-rel fs-50 ff-phi cl-blue fw-bold">
+                                Elements
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-6">
+                                    <div class="flip-box">
+                                        <figure class="flip-box-inner">
+                                            <img src="img/exim/element1.png" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-6">
+                                    <div class="flip-box">
+                                        <figure class="flip-box-inner">
+                                            <img src="img/exim/element2.png" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-6">
+                                    <div class="flip-box">
+                                        <figure class="flip-box-inner">
+                                            <img src="img/exim/element3.png" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-6">
+                                    <div class="flip-box">
+                                        <figure class="flip-box-inner">
+                                            <img src="img/exim/element4.png" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-6">
+                                    <div class="flip-box">
+                                        <figure class="flip-box-inner">
+                                            <img src="img/exim/element5.png" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-6">
+                                    <div class="flip-box">
+                                        <figure class="flip-box-inner">
+                                            <img src="img/exim/element6.png" class="img-fluid" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 pb-5 exim_tet">
+                        <div class="pt-md-5"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="text-white text-center fs-35 font-italic fw-bold ff-phi pb-5 pb-md-0 flex-center">
+                                    <span class="ps-rel quote_cloud">
+                                        Xuân <br>
+                                        nhật <br>
+                                        vinh <br>
+                                        hoa <br>
+                                        Phú <br>
+                                        quý <br>
+                                        lai
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="img/exim/eximtet.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="pb-md-5"></div>
+                    </div>
+                    <div class="pt-md-5 pb-md-5 calender-port">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <div class="slide_exim owl-carousel owl-theme">
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month1.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month2.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month3.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month4.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month5.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month6.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month7.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month8.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month9.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month10.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month11.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="hover_img">
+                                                <img src="img/exim/month12.png" class="img-fluid" alt="">
+                                            </figure>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row ml-0 mr-0">
+                        <div class="col-md-6 pl-0 pr-0 order-md-1">
+                            <div class="flex-center">
+                                <div class="p-md-5">
+                                    <div class="p-5">
+                                        <div class="text-center mb-3 fs-35 cl-blue ff-phi fw-bold">
+                                            Wall calendar
+                                        </div>
+                                        <img src="img/exim/mockup1.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-0 pr-0 order-md-2">
+                            <img src="img/exim/mockup2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 pl-0 pr-0 order-md-4">
+                            <div class="flex-center">
+                                <div class="p-md-5">
+                                    <div class="p-5">
+                                        <img src="img/exim/mockup4.jpg" class="img-fluid" alt="">
+                                        <div class="text-center mt-5 ps-rel ff-phi font-italic quote_block">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip .
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-0 pr-0 order-md-3">
+                            <img src="img/exim/mockup3.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="row mr-md-0 ml-md-0">
+                        <div class="col-md-6 pr-md-0 pl-md-0">
+                            <div class="flex-center text-center p-5 ">
+                                <img src="img/exim/moon.png" class="img-fluid" style="max-width: 200px" alt="">
+                                <div class="fs-50 ff-phi cl-blue fw-bold text-center font-italic">
+                                    Chúc<br>mừng<br>năm<br>mới
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pr-md-0 pl-md-0">
+                                <img src="img/exim/hpny.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <img src="img/exim/portexim.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="row mr--05 ml--05">
+                        <div class="col-md-6 pr-md-2 pl-md-2 mt-3">
+                            <div>
+                                <img src="img/exim/exim1.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 pr-md-2 pl-md-2 mt-3">
+                            <div>
+                                <img src="img/exim/exim2.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 pr-md-2 pl-md-2 mt-3">
+                            <div>
+                                <img src="img/exim/exim3.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 pr-md-2 pl-md-2 mt-3">
+                            <div>
+                                <img src="img/exim/exim4.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ps-rel">
+                        <div class="text_ft ff-phi font-italic text-center mt-5 mt-md-0 fs-18">
+                            Keyvisual Tet 2019 - The carp changes to dragon <br>
+                            Client: Eximbank <br>
+                            Creative Agency: Comma Media <br>
+                            Location: Ho Chi Minh, Vietnam <br>
+                            Graphic: Anh Ho, Thien Le, Lai Le <br>
+                            Photographer: Hee Phan
+                        </div>
+                        <img src="img/exim/eximfooter.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer id="footer_site">
+    <div class="container">
+        <div class="bg_primary outer_wrap">
+            <div class="row ml-md-0 mr-md-0">
+                <div class="col-2p5">
+                    <figure class="logo_footer">
+                        <a href="">
+                            <img src="img/logoft.png" class="img-fluid" alt="">
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-3p5">
+                    <div class="row ml-md-0 mr-md-0">
+                        <div class="col-md-4 pr-md-0 pl-md-0">
+                            <div class="title_ft">
+                                OFFICE
+                            </div>
+                            <p>25/7 Nguyen Binh Khiem, Ben Nghe Ward, Dist. 1, HCMC,
+                                VietNam</p>
+                            <p>0901 44 64 64 - 0909 133 789</p>
+                            <p>touch@commamedia.vn</p>
+                        </div>
+                        <div class="col-md-4 pr-md-0 pl-md-0">
+                            <div class="title_ft">
+                                CONTACT US
+                            </div>
+                            <ul>
+                                <li><a href="">Facebook</a></li>
+                                <li><a href="">Pinterest</a></li>
+                                <li><a href="">Twitter</a></li>
+                                <li><a href="">Linkedin</a></li>
+                                <li><a href="">Instagram</a></li>
+                                <li><a href="">Behance</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 pr-md-0 pl-md-0">
+                            <div class="title_ft">
+                                COPYRIGHT
+                            </div>
+                            <p>© 2019 Comma Media. <br>All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        jQuery('.slide_exim').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+        /*jQuery('.slide_exim').owlCarousel({
+            items: 3,
+            slideBy: 1,
+            loop:true,
+            nav: false,
+            autoplay : true,
+            autoplayTimeout: 6000,
+            smartSpeed:800,
+            /!*animateOut: 'fadeOut',
+            animateIn: 'fadeIn',*!/
+            dots: false
+        });*/
+    });
+</script>
+
+</body>
+</html>

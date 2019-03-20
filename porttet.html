@@ -1,0 +1,437 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Port Tet Commamedia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+
+        @font-face {
+            font-family: 'iCielBC1676ModernMap-Italic';
+            src: url('fonts/iCielBC1676ModernMap-Italic/iCielBC1676ModernMap-Italic.eot?#iefix') format('embedded-opentype'),  url('fonts/iCielBC1676ModernMap-Italic/iCielBC1676ModernMap-Italic.woff') format('woff'), url('fonts/iCielBC1676ModernMap-Italic/iCielBC1676ModernMap-Italic.ttf')  format('truetype'), url('fonts/iCielBC1676ModernMap-Italic/iCielBC1676ModernMap-Italic.svg#iCielBC1676ModernMap-Italic') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'iCielBCLeJeunePoster-Light';
+            src: url('fonts/iCielBCLeJeunePoster-Light/iCielBCLeJeunePoster-Light.eot?#iefix') format('embedded-opentype'),  url('fonts/iCielBCLeJeunePoster-Light/iCielBCLeJeunePoster-Light.otf')  format('opentype'),
+            url('fonts/iCielBCLeJeunePoster-Light/iCielBCLeJeunePoster-Light.woff') format('woff'), url('fonts/iCielBCLeJeunePoster-Light/iCielBCLeJeunePoster-Light.ttf')  format('truetype'), url('fonts/iCielBCLeJeunePoster-Light/iCielBCLeJeunePoster-Light.svg#iCielBCLeJeunePoster-Light') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*font*/
+        .ff-icelight{
+            font-family: 'iCielBCLeJeunePoster-Light', Arial;
+            font-size: 50px;
+        }
+        .ff-iceitalic{
+            font-family: 'iCielBC1676ModernMap-Italic', Arial;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .cl_red{
+            color: #b62126;
+        }
+        .cl_yellow{
+            color: #ffe5ca;
+        }
+        /*margin*/
+        .mr--1{
+            margin-right: -1rem;
+        }
+        .ml--1{
+            margin-left: -1rem;
+        }
+        .mr--05{
+            margin-right: -.5rem;
+        }
+        .ml--05{
+            margin-left: -.5rem;
+        }
+        .mt-50{
+            margin-top: 50px;
+        }
+        .mb-30{
+            margin-bottom: 30px;
+        }
+        .mt-100{
+            margin-top: 100px;
+        }
+        /*position*/
+        .ps-rel{
+            position: relative;
+        }
+        /*display*/
+        .flex-center{
+            display: -webkit-flex;display: flex; height: 100%; align-items: center; justify-content: center; flex-direction: column;
+        }
+        /*background*/
+        .bg_wrapper{
+            background: #ffe5ca;
+        }
+        .bg_red{
+            background: url('imgtet/bgsection2.png') repeat-y center center;
+        }
+        .img_abs{
+            position: absolute;
+            width: 65%;
+            bottom: 0;
+            right: 0;
+        }
+        h2{
+            background: url("imgtet/logo.png") no-repeat center center / contain;
+        }
+        h2 span{
+            position: relative;
+        }
+        h2 span:before{
+            position: absolute;
+            content: "";
+            right: 100%;
+            top: 0;
+            height: 50%;
+            width: 100px;
+            background: url("imgtet/beforett.png") no-repeat center center / contain;
+        }
+        h2 span:after{
+            position: absolute;
+            content: "";
+            left: 100%;
+            top: 0;
+            height: 100%;
+            width: 100px;
+            background: url("imgtet/aftertt.png") no-repeat center center / contain;
+        }
+        @media (max-width: 768px) {
+            .ff-icelight{
+                font-size: 30px;
+            }
+            .ff-iceitalic{
+                font-size: 18px;
+            }
+            .mb-30{
+                margin-bottom: 1rem;
+            }
+            .mt-100{
+                margin-top: 1rem;
+            }
+            .img_abs{
+                position: relative;
+                right: 0;
+                text-align: right;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="grid_site">
+    <div class="container">
+        <div class="grid_inner">
+            <ul class="d-none d-sm-block">
+                <li class="grid_item"></li>
+                <li class="grid_item"></li>
+                <li class="grid_item"></li>
+                <li class="grid_item"></li>
+                <li class="grid_item"></li>
+            </ul>
+            <ul class="d-block d-sm-none">
+                <li class="grid_item"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<ul class="contact_sidebar d-none d-sm-block" data-aos="fade-right" data-aos-delay="1000">
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Language">EN</a></li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Call"><img src="img/phone.png" class="img-fluid"
+                                                                                  alt=""></a></li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Chat"><img src="img/chat.png" class="img-fluid"
+                                                                                  alt=""></a></li>
+    <li>
+        <div class="line"></div>
+    </li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook"
+                                                                                    aria-hidden="true"></i></a></li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram"
+                                                                                     aria-hidden="true"></i></a></li>
+    <li><a href="" data-toggle="tooltip" data-placement="right" title="Linkedin"><i class="fa fa-linkedin"
+                                                                                    aria-hidden="true"></i></a></li>
+    <li class="line end"></li>
+</ul>
+<header id="header_site" class="fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 text-center">
+                <a href="/">
+                    <h1 title="Commamedia">
+                        <figure class="logo_site" data-aos="fade-left">
+                            <img src="img/logo.png" class="img-fluid" alt="">
+                        </figure>
+                    </h1>
+                </a>
+            </div>
+            <div class="col-md-10">
+                <nav class="navbar navbar-expand-lg navbar-light" data-aos="fade-left">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about-us.html">About us <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#client-comma">Clients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/career.html">Career</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact-us.html">Contact us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<div>
+    <div class="space_height"></div>
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="outer_wrap">
+                <div data-aos="fade-right">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="">Home</a></li>
+                        <li class="list-inline-item"><a href="">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="project-content">
+        <div class="container">
+            <div class="pr-3 pl-3">
+                <div class="bg_wrapper mr--1 ml--1 ps-rel">
+                    <div class="port_tet1">
+                        <img src="imgtet/banner.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="port_tet2 bg_red p-3 p-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <h2 class="text-center text-white ff-icelight pt-2 pb-2 pt-md-5 pb-md-5">
+                                    <span>Puzzle Pieces Of <br>
+                                    Traditional Culture</span></h2>
+                                <div class="text-justify text-white ff-iceitalic mb-5 mt-5">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                                    consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                    consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
+                                    odio dignissim qui Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+                                    vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+                                    vero eros et accumsan et iusto odio dignissim qui.
+                                </div>
+                            </div>
+                        </div>
+
+                        <img src="imgtet/imgsection2.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="port_tet3">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <div class="text-justify p-3 p-md-0 mt-5 mb-5 cl_red ff-iceitalic">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                                    consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                    consequat.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3 mb-md-0">
+                                    <img src="imgtet/img1.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3 mb-md-0">
+                                    <img src="imgtet/img2.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3 mb-md-0">
+                                    <img src="imgtet/img3.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mt-100 mb-30">
+                                    <img src="imgtet/img4.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-30">
+                                    <img src="imgtet/img5.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-30">
+                                    <img src="imgtet/img6.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-30">
+                                    <img src="imgtet/img8.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-30">
+                                    <img src="imgtet/img9.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-30">
+                                    <img src="imgtet/img10.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="imgtet/img11.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-5 ff-iceitalic cl_red">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port_tet4 bg_red">
+                        <div class="cl_yellow p-5">
+                            <p>
+                                Creative Agency: Comma Media
+                                <br>Location: Ho Chi Minh, Vietnam
+                                <br>Graphic: Anh Ho, Thuong Le
+                                <br>Photographer: Hee Phan
+
+                            </p>
+                            <p>
+                                www.commamedia.vn
+                                <br>facebook.com/commamedia
+                                <br>instagram.com/commamedia
+                            </p>
+                            <h3 class="ff-icelight mt-5">Thank for watching</h3>
+                        </div>
+                        <div class="img_abs">
+                            <img src="imgtet/ny.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer_site">
+    <div class="container">
+        <div class="bg_primary outer_wrap">
+            <div class="row ml-md-0 mr-md-0">
+                <div class="col-2p5">
+                    <figure class="logo_footer">
+                        <a href="">
+                            <img src="img/logoft.png" class="img-fluid" alt="">
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-3p5">
+                    <div class="row ml-md-0 mr-md-0">
+                        <div class="col-md-4 pr-md-0 pl-md-0">
+                            <div class="title_ft">
+                                OFFICE
+                            </div>
+                            <p>25/7 Nguyen Binh Khiem, Ben Nghe Ward, Dist. 1, HCMC,
+                                VietNam</p>
+                            <p>0901 44 64 64 - 0909 133 789</p>
+                            <p>touch@commamedia.vn</p>
+                        </div>
+                        <div class="col-md-4 pr-md-0 pl-md-0">
+                            <div class="title_ft">
+                                CONTACT US
+                            </div>
+                            <ul>
+                                <li><a href="">Facebook</a></li>
+                                <li><a href="">Pinterest</a></li>
+                                <li><a href="">Twitter</a></li>
+                                <li><a href="">Linkedin</a></li>
+                                <li><a href="">Instagram</a></li>
+                                <li><a href="">Behance</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 pr-md-0 pl-md-0">
+                            <div class="title_ft">
+                                COPYRIGHT
+                            </div>
+                            <p>© 2019 Comma Media. <br>All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
